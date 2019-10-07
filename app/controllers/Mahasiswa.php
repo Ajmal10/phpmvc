@@ -15,10 +15,10 @@ class Mahasiswa extends Controller{
 	{
 		$data['judul'] = 'Detail Mahasiswa';
 		$data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById($id);
+
 		$this->view('templates/header', $data);
 		$this->view('mahasiswa/detail', $data);
 		$this->view('templates/footer');
-
 	}
 
 	public function tambah()
@@ -50,6 +50,7 @@ class Mahasiswa extends Controller{
 	public function getubah()
 	{
 		echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($_POST['id']));
+		// echo json_encode($this->model('Mahasiswa_model')->getMahasiswaById($_POST['id']));
 	}
 
 	public function ubah()

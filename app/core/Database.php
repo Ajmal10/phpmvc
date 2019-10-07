@@ -68,7 +68,7 @@ class Database {
 	public function single()
 	{
 		$this->execute();
-		$this->stmt->fetch(PDO::FETCH_ASSOC);
+		return $this->stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
 
